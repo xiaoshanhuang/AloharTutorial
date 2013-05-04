@@ -23,6 +23,16 @@
 		AD0B4EA417345C6400ECA3C6 /* ATSecondViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = AD0B4EA317345C6400ECA3C6 /* ATSecondViewController.m */; };
 		AD0B4EA617345C6400ECA3C6 /* second.png in Resources */ = {isa = PBXBuildFile; fileRef = AD0B4EA517345C6400ECA3C6 /* second.png */; };
 		AD0B4EA817345C6400ECA3C6 /* second@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = AD0B4EA717345C6400ECA3C6 /* second@2x.png */; };
+		AD0B4EB017345C8300ECA3C6 /* ATMapKitViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = AD0B4EAF17345C8300ECA3C6 /* ATMapKitViewController.m */; };
+		AD0B4EB217345DA500ECA3C6 /* Alohar.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AD0B4EB117345DA500ECA3C6 /* Alohar.framework */; };
+		AD0B4EBA17345DCE00ECA3C6 /* CFNetwork.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AD0B4EB317345DCE00ECA3C6 /* CFNetwork.framework */; };
+		AD0B4EBB17345DCE00ECA3C6 /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AD0B4EB417345DCE00ECA3C6 /* CoreLocation.framework */; };
+		AD0B4EBC17345DCE00ECA3C6 /* CoreMotion.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AD0B4EB517345DCE00ECA3C6 /* CoreMotion.framework */; };
+		AD0B4EBD17345DCE00ECA3C6 /* CoreTelephony.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AD0B4EB617345DCE00ECA3C6 /* CoreTelephony.framework */; };
+		AD0B4EBE17345DCE00ECA3C6 /* libz.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = AD0B4EB717345DCE00ECA3C6 /* libz.dylib */; };
+		AD0B4EBF17345DCE00ECA3C6 /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AD0B4EB817345DCE00ECA3C6 /* MapKit.framework */; };
+		AD0B4EC017345DCE00ECA3C6 /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AD0B4EB917345DCE00ECA3C6 /* SystemConfiguration.framework */; };
+		AD0B4EC217345DFD00ECA3C6 /* MobileCoreServices.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AD0B4EC117345DFD00ECA3C6 /* MobileCoreServices.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -48,6 +58,17 @@
 		AD0B4EA317345C6400ECA3C6 /* ATSecondViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ATSecondViewController.m; sourceTree = "<group>"; };
 		AD0B4EA517345C6400ECA3C6 /* second.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = second.png; sourceTree = "<group>"; };
 		AD0B4EA717345C6400ECA3C6 /* second@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "second@2x.png"; sourceTree = "<group>"; };
+		AD0B4EAE17345C8300ECA3C6 /* ATMapKitViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ATMapKitViewController.h; sourceTree = "<group>"; };
+		AD0B4EAF17345C8300ECA3C6 /* ATMapKitViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ATMapKitViewController.m; sourceTree = "<group>"; };
+		AD0B4EB117345DA500ECA3C6 /* Alohar.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Alohar.framework; sourceTree = "<group>"; };
+		AD0B4EB317345DCE00ECA3C6 /* CFNetwork.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CFNetwork.framework; path = System/Library/Frameworks/CFNetwork.framework; sourceTree = SDKROOT; };
+		AD0B4EB417345DCE00ECA3C6 /* CoreLocation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreLocation.framework; path = System/Library/Frameworks/CoreLocation.framework; sourceTree = SDKROOT; };
+		AD0B4EB517345DCE00ECA3C6 /* CoreMotion.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreMotion.framework; path = System/Library/Frameworks/CoreMotion.framework; sourceTree = SDKROOT; };
+		AD0B4EB617345DCE00ECA3C6 /* CoreTelephony.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreTelephony.framework; path = System/Library/Frameworks/CoreTelephony.framework; sourceTree = SDKROOT; };
+		AD0B4EB717345DCE00ECA3C6 /* libz.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libz.dylib; path = usr/lib/libz.dylib; sourceTree = SDKROOT; };
+		AD0B4EB817345DCE00ECA3C6 /* MapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapKit.framework; path = System/Library/Frameworks/MapKit.framework; sourceTree = SDKROOT; };
+		AD0B4EB917345DCE00ECA3C6 /* SystemConfiguration.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SystemConfiguration.framework; path = System/Library/Frameworks/SystemConfiguration.framework; sourceTree = SDKROOT; };
+		AD0B4EC117345DFD00ECA3C6 /* MobileCoreServices.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MobileCoreServices.framework; path = System/Library/Frameworks/MobileCoreServices.framework; sourceTree = SDKROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -55,9 +76,18 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				AD0B4EC217345DFD00ECA3C6 /* MobileCoreServices.framework in Frameworks */,
+				AD0B4EBA17345DCE00ECA3C6 /* CFNetwork.framework in Frameworks */,
+				AD0B4EBB17345DCE00ECA3C6 /* CoreLocation.framework in Frameworks */,
+				AD0B4EBC17345DCE00ECA3C6 /* CoreMotion.framework in Frameworks */,
+				AD0B4EBD17345DCE00ECA3C6 /* CoreTelephony.framework in Frameworks */,
+				AD0B4EBE17345DCE00ECA3C6 /* libz.dylib in Frameworks */,
+				AD0B4EBF17345DCE00ECA3C6 /* MapKit.framework in Frameworks */,
+				AD0B4EC017345DCE00ECA3C6 /* SystemConfiguration.framework in Frameworks */,
 				AD0B4E8117345C6400ECA3C6 /* UIKit.framework in Frameworks */,
 				AD0B4E8317345C6400ECA3C6 /* Foundation.framework in Frameworks */,
 				AD0B4E8517345C6400ECA3C6 /* CoreGraphics.framework in Frameworks */,
+				AD0B4EB217345DA500ECA3C6 /* Alohar.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -67,6 +97,14 @@
 		AD0B4E7417345C6400ECA3C6 = {
 			isa = PBXGroup;
 			children = (
+				AD0B4EC117345DFD00ECA3C6 /* MobileCoreServices.framework */,
+				AD0B4EB317345DCE00ECA3C6 /* CFNetwork.framework */,
+				AD0B4EB417345DCE00ECA3C6 /* CoreLocation.framework */,
+				AD0B4EB517345DCE00ECA3C6 /* CoreMotion.framework */,
+				AD0B4EB617345DCE00ECA3C6 /* CoreTelephony.framework */,
+				AD0B4EB717345DCE00ECA3C6 /* libz.dylib */,
+				AD0B4EB817345DCE00ECA3C6 /* MapKit.framework */,
+				AD0B4EB917345DCE00ECA3C6 /* SystemConfiguration.framework */,
 				AD0B4E8617345C6400ECA3C6 /* AloharTutorial */,
 				AD0B4E7F17345C6400ECA3C6 /* Frameworks */,
 				AD0B4E7E17345C6400ECA3C6 /* Products */,
@@ -84,6 +122,7 @@
 		AD0B4E7F17345C6400ECA3C6 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				AD0B4EB117345DA500ECA3C6 /* Alohar.framework */,
 				AD0B4E8017345C6400ECA3C6 /* UIKit.framework */,
 				AD0B4E8217345C6400ECA3C6 /* Foundation.framework */,
 				AD0B4E8417345C6400ECA3C6 /* CoreGraphics.framework */,
@@ -97,6 +136,8 @@
 				AD0B4E8F17345C6400ECA3C6 /* ATAppDelegate.h */,
 				AD0B4E9017345C6400ECA3C6 /* ATAppDelegate.m */,
 				AD0B4E9817345C6400ECA3C6 /* MainStoryboard.storyboard */,
+				AD0B4EAE17345C8300ECA3C6 /* ATMapKitViewController.h */,
+				AD0B4EAF17345C8300ECA3C6 /* ATMapKitViewController.m */,
 				AD0B4E9B17345C6400ECA3C6 /* ATFirstViewController.h */,
 				AD0B4E9C17345C6400ECA3C6 /* ATFirstViewController.m */,
 				AD0B4E9E17345C6400ECA3C6 /* first.png */,
@@ -199,6 +240,7 @@
 				AD0B4E9117345C6400ECA3C6 /* ATAppDelegate.m in Sources */,
 				AD0B4E9D17345C6400ECA3C6 /* ATFirstViewController.m in Sources */,
 				AD0B4EA417345C6400ECA3C6 /* ATSecondViewController.m in Sources */,
+				AD0B4EB017345C8300ECA3C6 /* ATMapKitViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -283,9 +325,14 @@
 		AD0B4EAC17345C6400ECA3C6 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"\"$(SRCROOT)\"",
+				);
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "AloharTutorial/AloharTutorial-Prefix.pch";
 				INFOPLIST_FILE = "AloharTutorial/AloharTutorial-Info.plist";
+				OTHER_LDFLAGS = "-all_load";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				WRAPPER_EXTENSION = app;
 			};
@@ -294,9 +341,14 @@
 		AD0B4EAD17345C6400ECA3C6 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"\"$(SRCROOT)\"",
+				);
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "AloharTutorial/AloharTutorial-Prefix.pch";
 				INFOPLIST_FILE = "AloharTutorial/AloharTutorial-Info.plist";
+				OTHER_LDFLAGS = "-all_load";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				WRAPPER_EXTENSION = app;
 			};

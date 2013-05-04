@@ -13,7 +13,21 @@
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
 {
     // Override point for customization after application launch.
+    [Alohar registerWithAppID:@"333"
+                    andAPIKey:@"393f764979844e9c863185f38adf9d45d268dead"
+                 withDelegate:self];
     return YES;
+}
+
+- (void)aloharDidLogin:(NSString *)userID
+{
+    NSLog(@"User logged in. ");
+    [Alohar startMonitoringUser];
+}
+
+- (void)aloharDidFailWithError:(NSError *)error
+{
+    NSLog(@"User login failed, Error: %@", error);
 }
 							
 - (void)applicationWillResignActive:(UIApplication *)application
