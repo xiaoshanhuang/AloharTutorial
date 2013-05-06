@@ -41,6 +41,8 @@
 	// Do any additional setup after loading the view.
     [Alohar setMotionDelegate:self];
     [Alohar setMobileStateDelegate:self];
+    self.mapView.delegate = self;
+    
 }
 
 - (void)viewWillAppear:(BOOL)animated
@@ -49,7 +51,8 @@
     [NSTimer scheduledTimerWithTimeInterval:3.0
                                      target:self
                                    selector:@selector(updateStatesAndLocation)
-                                   userInfo:nil repeats:YES];
+                                   userInfo:nil
+                                    repeats:YES];
     [self updateStatesAndLocation];
 }
 
@@ -67,6 +70,7 @@
     [[NSString alloc] initWithFormat:@"%f", self.currentLocation.coordinate.latitude];
     self.currentLocationLongitude.text =
     [[NSString alloc] initWithFormat:@"%f", self.currentLocation.coordinate.longitude];
+
 }
 
 - (void)didUpdateToMobileState:(ALMobileState *)newMobileState fromMobileState:(ALMobileState *)oldMobileState
@@ -77,6 +81,12 @@
 - (void)didUpdateToMotionState:(ALMotionState *)newMotionState fromMotionState:(ALMotionState *)oldMotionState
 {
     
+}
+
+- (void)mapView:(MKMapView *)mapView didUpdateUserLocation:(MKUserLocation *)userLocation
+{
+    [self.mapView setCenterCoordinate:self.mapView.userLocation.coordinate animated:YES];
+    [self.mapView setRegion:MKCoordinateRegionMakeWithDistance(self.mapView.userLocation.coordinate, 1000, 1000) animated:YES];
 }
 
 - (void)didReceiveMemoryWarning

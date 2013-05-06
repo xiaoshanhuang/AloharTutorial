@@ -10,6 +10,6 @@
 #import <Alohar/Alohar.h>
 #import <MapKit/MapKit.h>
 
-@interface ATMapKitViewController : UIViewController <ALMobileStateDelegegate, ALMotionDelegate, ALSessionDelegate, ALUserStayDelegate>
+@interface ATMapKitViewController : UIViewController <MKMapViewDelegate, ALMobileStateDelegegate, ALMotionDelegate, ALSessionDelegate, ALUserStayDelegate>
 
 @end
