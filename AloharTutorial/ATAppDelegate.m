@@ -12,7 +12,6 @@
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
 {
-    // Override point for customization after application launch.
     [Alohar registerWithAppID:@"333"
                     andAPIKey:@"393f764979844e9c863185f38adf9d45d268dead"
                  withDelegate:self];
@@ -26,10 +25,14 @@
 }
 
 - (void)aloharDidFailWithError:(NSError *)error
-{
-    NSLog(@"User login failed, Error: %@", error);
+{    
+    NSLog(@"Sorry, there was an error with alohar: %@", error);
+    dispatch_async(dispatch_get_main_queue(), ^{
+        UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"Error" message:@"Failed to login, please re-try" delegate:nil cancelButtonTitle:@"OK" otherButtonTitles:nil, nil];
+        [alert show];
+    });
 }
-							
+
 - (void)applicationWillResignActive:(UIApplication *)application
 {
     // Sent when the application is about to move from active to inactive state. This can occur for certain types of temporary interruptions (such as an incoming phone call or SMS message) or when the user quits the application and it begins the transition to the background state.

@@ -6,9 +6,9 @@
 //  Copyright (c) 2013 Xiaoshan Huang. All rights reserved.
 //
 
-#import "ATMapKitViewController.h"
+#import "ATMapViewController.h"
 
-@interface ATMapKitViewController ()
+@interface ATMapViewController ()
 
 @property (strong, nonatomic) NSTimer * callBackTimer;
 @property (strong, nonatomic) CLLocation * currentLocation;
@@ -24,7 +24,7 @@
 
 @end
 
-@implementation ATMapKitViewController
+@implementation ATMapViewController
 
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
 {
@@ -48,7 +48,7 @@
 - (void)viewWillAppear:(BOOL)animated
 {
     self.callBackTimer =
-    [NSTimer scheduledTimerWithTimeInterval:3.0
+    [NSTimer scheduledTimerWithTimeInterval:60
                                      target:self
                                    selector:@selector(updateStatesAndLocation)
                                    userInfo:nil
@@ -58,29 +58,26 @@
 
 - (void)updateStatesAndLocation
 {
-    ALMotionState * motionState = [Alohar currentMotionState];
-    ALMobileState * mobileState = [Alohar currentMobileState];
     ALUserStay * userStay = [Alohar currentUserStay];
     self.currentLocation = [Alohar currentLocation];
-    self.motionStateLabel.text = [motionState stateDescription];
-    self.mobileStateLabel.text = [mobileState stateDescription];
     self.currentPlaceNameLabel.text = userStay.selectedPlace.name;
     self.currentPlaceAddressLabel.text = userStay.selectedPlace.address;
     self.currentLocationLatitude.text =
     [[NSString alloc] initWithFormat:@"%f", self.currentLocation.coordinate.latitude];
     self.currentLocationLongitude.text =
     [[NSString alloc] initWithFormat:@"%f", self.currentLocation.coordinate.longitude];
-
 }
 
 - (void)didUpdateToMobileState:(ALMobileState *)newMobileState fromMobileState:(ALMobileState *)oldMobileState
 {
-    
+    ALMobileState * mobileState = [Alohar currentMobileState];
+    self.mobileStateLabel.text = [mobileState stateDescription];
 }
 
 - (void)didUpdateToMotionState:(ALMotionState *)newMotionState fromMotionState:(ALMotionState *)oldMotionState
 {
-    
+    ALMotionState * motionState = [Alohar currentMotionState];
+    self.motionStateLabel.text = [motionState stateDescription];
 }
 
 - (void)mapView:(MKMapView *)mapView didUpdateUserLocation:(MKUserLocation *)userLocation

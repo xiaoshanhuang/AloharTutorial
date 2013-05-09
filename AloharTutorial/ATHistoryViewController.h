@@ -1,5 +1,5 @@
 //
-//  ATFirstViewController.h
+//  ATSecondViewController.h
 //  AloharTutorial
 //
 //  Created by Xiaoshan Huang on 5/3/13.
@@ -8,6 +8,6 @@
 
 #import <UIKit/UIKit.h>
 
-@interface ATFirstViewController : UIViewController
+@interface ATHistoryViewController : UIViewController <UITableViewDataSource, UITableViewDelegate>
 
 @end

@@ -8,9 +8,9 @@
 
 #import <UIKit/UIKit.h>
 #import <Alohar/Alohar.h>
+#import <Alohar/ALLog.h>
 
-@interface ATAppDelegate : UIResponder <UIApplicationDelegate, ALSessionDelegate>
-
+@interface ATAppDelegate : UIResponder <UIApplicationDelegate, ALSessionDelegate, ALLogDelegate, ALUserStayDelegate>
 @property (strong, nonatomic) UIWindow *window;
 
 @end
