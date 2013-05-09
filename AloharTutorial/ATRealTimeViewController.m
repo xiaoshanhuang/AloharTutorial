@@ -79,10 +79,9 @@
 - (void)updateStates
 {
 //    [self speechUsingGoogleTTS:@"test"];
-//    ALMotionState * motionState = [Alohar currentMotionState];
-//    self.motionStateLabel.text = [motionState stateDescription];
-//    ALMobileState * mobileState = [Alohar currentMobileState];
-//    self.mobileStateLabel.text = [mobileState stateDescription];
+    ALMotionState * motionState = [Alohar currentMotionState];
+    self.motionStateLabel.text = [motionState stateDescription];
+    [self speechUsingGoogleTTS:[motionState stateDescription]];
 }
 
 #pragma mark - Core Motion
