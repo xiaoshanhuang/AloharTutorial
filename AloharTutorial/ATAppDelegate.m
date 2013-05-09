@@ -15,6 +15,9 @@
     [Alohar registerWithAppID:@"333"
                     andAPIKey:@"393f764979844e9c863185f38adf9d45d268dead"
                  withDelegate:self];
+    [[AVAudioSession sharedInstance] setDelegate: self];
+    [[AVAudioSession sharedInstance] setCategory:AVAudioSessionCategoryPlayback error:nil];
+
     return YES;
 }
 
