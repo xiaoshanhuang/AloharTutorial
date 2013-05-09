@@ -10,20 +10,10 @@
 		AD0B4E8117345C6400ECA3C6 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AD0B4E8017345C6400ECA3C6 /* UIKit.framework */; };
 		AD0B4E8317345C6400ECA3C6 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AD0B4E8217345C6400ECA3C6 /* Foundation.framework */; };
 		AD0B4E8517345C6400ECA3C6 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AD0B4E8417345C6400ECA3C6 /* CoreGraphics.framework */; };
-		AD0B4E8B17345C6400ECA3C6 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = AD0B4E8917345C6400ECA3C6 /* InfoPlist.strings */; };
 		AD0B4E8D17345C6400ECA3C6 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = AD0B4E8C17345C6400ECA3C6 /* main.m */; };
 		AD0B4E9117345C6400ECA3C6 /* ATAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = AD0B4E9017345C6400ECA3C6 /* ATAppDelegate.m */; };
-		AD0B4E9317345C6400ECA3C6 /* Default.png in Resources */ = {isa = PBXBuildFile; fileRef = AD0B4E9217345C6400ECA3C6 /* Default.png */; };
-		AD0B4E9517345C6400ECA3C6 /* Default@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = AD0B4E9417345C6400ECA3C6 /* Default@2x.png */; };
-		AD0B4E9717345C6400ECA3C6 /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = AD0B4E9617345C6400ECA3C6 /* Default-568h@2x.png */; };
-		AD0B4E9A17345C6400ECA3C6 /* MainStoryboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AD0B4E9817345C6400ECA3C6 /* MainStoryboard.storyboard */; };
-		AD0B4E9D17345C6400ECA3C6 /* ATFirstViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = AD0B4E9C17345C6400ECA3C6 /* ATFirstViewController.m */; };
-		AD0B4E9F17345C6400ECA3C6 /* first.png in Resources */ = {isa = PBXBuildFile; fileRef = AD0B4E9E17345C6400ECA3C6 /* first.png */; };
-		AD0B4EA117345C6400ECA3C6 /* first@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = AD0B4EA017345C6400ECA3C6 /* first@2x.png */; };
-		AD0B4EA417345C6400ECA3C6 /* ATSecondViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = AD0B4EA317345C6400ECA3C6 /* ATSecondViewController.m */; };
-		AD0B4EA617345C6400ECA3C6 /* second.png in Resources */ = {isa = PBXBuildFile; fileRef = AD0B4EA517345C6400ECA3C6 /* second.png */; };
-		AD0B4EA817345C6400ECA3C6 /* second@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = AD0B4EA717345C6400ECA3C6 /* second@2x.png */; };
-		AD0B4EB017345C8300ECA3C6 /* ATMapKitViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = AD0B4EAF17345C8300ECA3C6 /* ATMapKitViewController.m */; };
+		AD0B4EA417345C6400ECA3C6 /* ATHistoryViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = AD0B4EA317345C6400ECA3C6 /* ATHistoryViewController.m */; };
+		AD0B4EB017345C8300ECA3C6 /* ATMapViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = AD0B4EAF17345C8300ECA3C6 /* ATMapViewController.m */; };
 		AD0B4EB217345DA500ECA3C6 /* Alohar.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AD0B4EB117345DA500ECA3C6 /* Alohar.framework */; };
 		AD0B4EBA17345DCE00ECA3C6 /* CFNetwork.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AD0B4EB317345DCE00ECA3C6 /* CFNetwork.framework */; };
 		AD0B4EBB17345DCE00ECA3C6 /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AD0B4EB417345DCE00ECA3C6 /* CoreLocation.framework */; };
@@ -33,6 +23,20 @@
 		AD0B4EBF17345DCE00ECA3C6 /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AD0B4EB817345DCE00ECA3C6 /* MapKit.framework */; };
 		AD0B4EC017345DCE00ECA3C6 /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AD0B4EB917345DCE00ECA3C6 /* SystemConfiguration.framework */; };
 		AD0B4EC217345DFD00ECA3C6 /* MobileCoreServices.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AD0B4EC117345DFD00ECA3C6 /* MobileCoreServices.framework */; };
+		AD0B6495173B4E6300DF5F4B /* AVFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AD0B6494173B4E6300DF5F4B /* AVFoundation.framework */; };
+		AD84AEC01739830C00935DB2 /* ATSettingsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = AD84AEBF1739830C00935DB2 /* ATSettingsViewController.m */; };
+		ADA9C73B173B04DA00A37ED3 /* ATRealTimeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = ADA9C73A173B04DA00A37ED3 /* ATRealTimeViewController.m */; };
+		ADA9C73D173B075C00A37ED3 /* AudioToolbox.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = ADA9C73C173B075C00A37ED3 /* AudioToolbox.framework */; };
+		ADE49999173B0D7B00C92FB6 /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = ADE49990173B0D7B00C92FB6 /* Default-568h@2x.png */; };
+		ADE4999A173B0D7B00C92FB6 /* Default.png in Resources */ = {isa = PBXBuildFile; fileRef = ADE49991173B0D7B00C92FB6 /* Default.png */; };
+		ADE4999B173B0D7B00C92FB6 /* Default@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = ADE49992173B0D7B00C92FB6 /* Default@2x.png */; };
+		ADE4999C173B0D7B00C92FB6 /* first.png in Resources */ = {isa = PBXBuildFile; fileRef = ADE49993173B0D7B00C92FB6 /* first.png */; };
+		ADE4999D173B0D7B00C92FB6 /* first@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = ADE49994173B0D7B00C92FB6 /* first@2x.png */; };
+		ADE4999E173B0D7B00C92FB6 /* second.png in Resources */ = {isa = PBXBuildFile; fileRef = ADE49995173B0D7B00C92FB6 /* second.png */; };
+		ADE4999F173B0D7B00C92FB6 /* second@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = ADE49996173B0D7B00C92FB6 /* second@2x.png */; };
+		ADE499A0173B0D7B00C92FB6 /* tap.aif in Resources */ = {isa = PBXBuildFile; fileRef = ADE49998173B0D7B00C92FB6 /* tap.aif */; };
+		ADE499A6173B0DAE00C92FB6 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = ADE499A2173B0DAE00C92FB6 /* InfoPlist.strings */; };
+		ADE499A7173B0DAE00C92FB6 /* MainStoryboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = ADE499A4173B0DAE00C92FB6 /* MainStoryboard.storyboard */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -41,25 +45,14 @@
 		AD0B4E8217345C6400ECA3C6 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		AD0B4E8417345C6400ECA3C6 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
 		AD0B4E8817345C6400ECA3C6 /* AloharTutorial-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "AloharTutorial-Info.plist"; sourceTree = "<group>"; };
-		AD0B4E8A17345C6400ECA3C6 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		AD0B4E8C17345C6400ECA3C6 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		AD0B4E8E17345C6400ECA3C6 /* AloharTutorial-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "AloharTutorial-Prefix.pch"; sourceTree = "<group>"; };
 		AD0B4E8F17345C6400ECA3C6 /* ATAppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ATAppDelegate.h; sourceTree = "<group>"; };
 		AD0B4E9017345C6400ECA3C6 /* ATAppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ATAppDelegate.m; sourceTree = "<group>"; };
-		AD0B4E9217345C6400ECA3C6 /* Default.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Default.png; sourceTree = "<group>"; };
-		AD0B4E9417345C6400ECA3C6 /* Default@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default@2x.png"; sourceTree = "<group>"; };
-		AD0B4E9617345C6400ECA3C6 /* Default-568h@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default-568h@2x.png"; sourceTree = "<group>"; };
-		AD0B4E9917345C6400ECA3C6 /* en */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = en; path = en.lproj/MainStoryboard.storyboard; sourceTree = "<group>"; };
-		AD0B4E9B17345C6400ECA3C6 /* ATFirstViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ATFirstViewController.h; sourceTree = "<group>"; };
-		AD0B4E9C17345C6400ECA3C6 /* ATFirstViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ATFirstViewController.m; sourceTree = "<group>"; };
-		AD0B4E9E17345C6400ECA3C6 /* first.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = first.png; sourceTree = "<group>"; };
-		AD0B4EA017345C6400ECA3C6 /* first@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "first@2x.png"; sourceTree = "<group>"; };
-		AD0B4EA217345C6400ECA3C6 /* ATSecondViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ATSecondViewController.h; sourceTree = "<group>"; };
-		AD0B4EA317345C6400ECA3C6 /* ATSecondViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ATSecondViewController.m; sourceTree = "<group>"; };
-		AD0B4EA517345C6400ECA3C6 /* second.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = second.png; sourceTree = "<group>"; };
-		AD0B4EA717345C6400ECA3C6 /* second@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "second@2x.png"; sourceTree = "<group>"; };
-		AD0B4EAE17345C8300ECA3C6 /* ATMapKitViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ATMapKitViewController.h; sourceTree = "<group>"; };
-		AD0B4EAF17345C8300ECA3C6 /* ATMapKitViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ATMapKitViewController.m; sourceTree = "<group>"; };
+		AD0B4EA217345C6400ECA3C6 /* ATHistoryViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ATHistoryViewController.h; sourceTree = "<group>"; };
+		AD0B4EA317345C6400ECA3C6 /* ATHistoryViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ATHistoryViewController.m; sourceTree = "<group>"; };
+		AD0B4EAE17345C8300ECA3C6 /* ATMapViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ATMapViewController.h; sourceTree = "<group>"; };
+		AD0B4EAF17345C8300ECA3C6 /* ATMapViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ATMapViewController.m; sourceTree = "<group>"; };
 		AD0B4EB117345DA500ECA3C6 /* Alohar.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Alohar.framework; sourceTree = "<group>"; };
 		AD0B4EB317345DCE00ECA3C6 /* CFNetwork.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CFNetwork.framework; path = System/Library/Frameworks/CFNetwork.framework; sourceTree = SDKROOT; };
 		AD0B4EB417345DCE00ECA3C6 /* CoreLocation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreLocation.framework; path = System/Library/Frameworks/CoreLocation.framework; sourceTree = SDKROOT; };
@@ -69,6 +62,22 @@
 		AD0B4EB817345DCE00ECA3C6 /* MapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapKit.framework; path = System/Library/Frameworks/MapKit.framework; sourceTree = SDKROOT; };
 		AD0B4EB917345DCE00ECA3C6 /* SystemConfiguration.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SystemConfiguration.framework; path = System/Library/Frameworks/SystemConfiguration.framework; sourceTree = SDKROOT; };
 		AD0B4EC117345DFD00ECA3C6 /* MobileCoreServices.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MobileCoreServices.framework; path = System/Library/Frameworks/MobileCoreServices.framework; sourceTree = SDKROOT; };
+		AD0B6494173B4E6300DF5F4B /* AVFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AVFoundation.framework; path = System/Library/Frameworks/AVFoundation.framework; sourceTree = SDKROOT; };
+		AD84AEBE1739830C00935DB2 /* ATSettingsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ATSettingsViewController.h; sourceTree = "<group>"; };
+		AD84AEBF1739830C00935DB2 /* ATSettingsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ATSettingsViewController.m; sourceTree = "<group>"; };
+		ADA9C739173B04DA00A37ED3 /* ATRealTimeViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ATRealTimeViewController.h; sourceTree = "<group>"; };
+		ADA9C73A173B04DA00A37ED3 /* ATRealTimeViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ATRealTimeViewController.m; sourceTree = "<group>"; };
+		ADA9C73C173B075C00A37ED3 /* AudioToolbox.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AudioToolbox.framework; path = System/Library/Frameworks/AudioToolbox.framework; sourceTree = SDKROOT; };
+		ADE49990173B0D7B00C92FB6 /* Default-568h@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "Default-568h@2x.png"; path = "Resources/Images/Default-568h@2x.png"; sourceTree = "<group>"; };
+		ADE49991173B0D7B00C92FB6 /* Default.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = Default.png; path = Resources/Images/Default.png; sourceTree = "<group>"; };
+		ADE49992173B0D7B00C92FB6 /* Default@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "Default@2x.png"; path = "Resources/Images/Default@2x.png"; sourceTree = "<group>"; };
+		ADE49993173B0D7B00C92FB6 /* first.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = first.png; sourceTree = "<group>"; };
+		ADE49994173B0D7B00C92FB6 /* first@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "first@2x.png"; sourceTree = "<group>"; };
+		ADE49995173B0D7B00C92FB6 /* second.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = second.png; sourceTree = "<group>"; };
+		ADE49996173B0D7B00C92FB6 /* second@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "second@2x.png"; sourceTree = "<group>"; };
+		ADE49998173B0D7B00C92FB6 /* tap.aif */ = {isa = PBXFileReference; lastKnownFileType = file; path = tap.aif; sourceTree = "<group>"; };
+		ADE499A3173B0DAE00C92FB6 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = InfoPlist.strings; sourceTree = "<group>"; };
+		ADE499A5173B0DAE00C92FB6 /* en */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = en; path = MainStoryboard.storyboard; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -76,6 +85,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				AD0B6495173B4E6300DF5F4B /* AVFoundation.framework in Frameworks */,
+				ADA9C73D173B075C00A37ED3 /* AudioToolbox.framework in Frameworks */,
 				AD0B4EC217345DFD00ECA3C6 /* MobileCoreServices.framework in Frameworks */,
 				AD0B4EBA17345DCE00ECA3C6 /* CFNetwork.framework in Frameworks */,
 				AD0B4EBB17345DCE00ECA3C6 /* CoreLocation.framework in Frameworks */,
@@ -97,14 +108,6 @@
 		AD0B4E7417345C6400ECA3C6 = {
 			isa = PBXGroup;
 			children = (
-				AD0B4EC117345DFD00ECA3C6 /* MobileCoreServices.framework */,
-				AD0B4EB317345DCE00ECA3C6 /* CFNetwork.framework */,
-				AD0B4EB417345DCE00ECA3C6 /* CoreLocation.framework */,
-				AD0B4EB517345DCE00ECA3C6 /* CoreMotion.framework */,
-				AD0B4EB617345DCE00ECA3C6 /* CoreTelephony.framework */,
-				AD0B4EB717345DCE00ECA3C6 /* libz.dylib */,
-				AD0B4EB817345DCE00ECA3C6 /* MapKit.framework */,
-				AD0B4EB917345DCE00ECA3C6 /* SystemConfiguration.framework */,
 				AD0B4E8617345C6400ECA3C6 /* AloharTutorial */,
 				AD0B4E7F17345C6400ECA3C6 /* Frameworks */,
 				AD0B4E7E17345C6400ECA3C6 /* Products */,
@@ -122,6 +125,16 @@
 		AD0B4E7F17345C6400ECA3C6 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				AD0B6494173B4E6300DF5F4B /* AVFoundation.framework */,
+				ADA9C73C173B075C00A37ED3 /* AudioToolbox.framework */,
+				AD0B4EC117345DFD00ECA3C6 /* MobileCoreServices.framework */,
+				AD0B4EB317345DCE00ECA3C6 /* CFNetwork.framework */,
+				AD0B4EB417345DCE00ECA3C6 /* CoreLocation.framework */,
+				AD0B4EB517345DCE00ECA3C6 /* CoreMotion.framework */,
+				AD0B4EB617345DCE00ECA3C6 /* CoreTelephony.framework */,
+				AD0B4EB717345DCE00ECA3C6 /* libz.dylib */,
+				AD0B4EB817345DCE00ECA3C6 /* MapKit.framework */,
+				AD0B4EB917345DCE00ECA3C6 /* SystemConfiguration.framework */,
 				AD0B4EB117345DA500ECA3C6 /* Alohar.framework */,
 				AD0B4E8017345C6400ECA3C6 /* UIKit.framework */,
 				AD0B4E8217345C6400ECA3C6 /* Foundation.framework */,
@@ -133,19 +146,19 @@
 		AD0B4E8617345C6400ECA3C6 /* AloharTutorial */ = {
 			isa = PBXGroup;
 			children = (
+				ADE4998F173B0D7B00C92FB6 /* Images */,
+				ADE49997173B0D7B00C92FB6 /* Sounds */,
 				AD0B4E8F17345C6400ECA3C6 /* ATAppDelegate.h */,
 				AD0B4E9017345C6400ECA3C6 /* ATAppDelegate.m */,
-				AD0B4E9817345C6400ECA3C6 /* MainStoryboard.storyboard */,
-				AD0B4EAE17345C8300ECA3C6 /* ATMapKitViewController.h */,
-				AD0B4EAF17345C8300ECA3C6 /* ATMapKitViewController.m */,
-				AD0B4E9B17345C6400ECA3C6 /* ATFirstViewController.h */,
-				AD0B4E9C17345C6400ECA3C6 /* ATFirstViewController.m */,
-				AD0B4E9E17345C6400ECA3C6 /* first.png */,
-				AD0B4EA017345C6400ECA3C6 /* first@2x.png */,
-				AD0B4EA217345C6400ECA3C6 /* ATSecondViewController.h */,
-				AD0B4EA317345C6400ECA3C6 /* ATSecondViewController.m */,
-				AD0B4EA517345C6400ECA3C6 /* second.png */,
-				AD0B4EA717345C6400ECA3C6 /* second@2x.png */,
+				ADA9C739173B04DA00A37ED3 /* ATRealTimeViewController.h */,
+				ADA9C73A173B04DA00A37ED3 /* ATRealTimeViewController.m */,
+				AD84AEBE1739830C00935DB2 /* ATSettingsViewController.h */,
+				AD84AEBF1739830C00935DB2 /* ATSettingsViewController.m */,
+				AD0B4EAE17345C8300ECA3C6 /* ATMapViewController.h */,
+				AD0B4EAF17345C8300ECA3C6 /* ATMapViewController.m */,
+				AD0B4EA217345C6400ECA3C6 /* ATHistoryViewController.h */,
+				AD0B4EA317345C6400ECA3C6 /* ATHistoryViewController.m */,
+				ADE499A4173B0DAE00C92FB6 /* MainStoryboard.storyboard */,
 				AD0B4E8717345C6400ECA3C6 /* Supporting Files */,
 			);
 			path = AloharTutorial;
@@ -154,15 +167,36 @@
 		AD0B4E8717345C6400ECA3C6 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				ADE499A2173B0DAE00C92FB6 /* InfoPlist.strings */,
+				ADE49990173B0D7B00C92FB6 /* Default-568h@2x.png */,
+				ADE49991173B0D7B00C92FB6 /* Default.png */,
+				ADE49992173B0D7B00C92FB6 /* Default@2x.png */,
 				AD0B4E8817345C6400ECA3C6 /* AloharTutorial-Info.plist */,
-				AD0B4E8917345C6400ECA3C6 /* InfoPlist.strings */,
 				AD0B4E8C17345C6400ECA3C6 /* main.m */,
 				AD0B4E8E17345C6400ECA3C6 /* AloharTutorial-Prefix.pch */,
-				AD0B4E9217345C6400ECA3C6 /* Default.png */,
-				AD0B4E9417345C6400ECA3C6 /* Default@2x.png */,
-				AD0B4E9617345C6400ECA3C6 /* Default-568h@2x.png */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		ADE4998F173B0D7B00C92FB6 /* Images */ = {
+			isa = PBXGroup;
+			children = (
+				ADE49993173B0D7B00C92FB6 /* first.png */,
+				ADE49994173B0D7B00C92FB6 /* first@2x.png */,
+				ADE49995173B0D7B00C92FB6 /* second.png */,
+				ADE49996173B0D7B00C92FB6 /* second@2x.png */,
+			);
+			name = Images;
+			path = Resources/Images;
+			sourceTree = "<group>";
+		};
+		ADE49997173B0D7B00C92FB6 /* Sounds */ = {
+			isa = PBXGroup;
+			children = (
+				ADE49998173B0D7B00C92FB6 /* tap.aif */,
+			);
+			name = Sounds;
+			path = Resources/Sounds;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -217,15 +251,16 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				AD0B4E8B17345C6400ECA3C6 /* InfoPlist.strings in Resources */,
-				AD0B4E9317345C6400ECA3C6 /* Default.png in Resources */,
-				AD0B4E9517345C6400ECA3C6 /* Default@2x.png in Resources */,
-				AD0B4E9717345C6400ECA3C6 /* Default-568h@2x.png in Resources */,
-				AD0B4E9A17345C6400ECA3C6 /* MainStoryboard.storyboard in Resources */,
-				AD0B4E9F17345C6400ECA3C6 /* first.png in Resources */,
-				AD0B4EA117345C6400ECA3C6 /* first@2x.png in Resources */,
-				AD0B4EA617345C6400ECA3C6 /* second.png in Resources */,
-				AD0B4EA817345C6400ECA3C6 /* second@2x.png in Resources */,
+				ADE49999173B0D7B00C92FB6 /* Default-568h@2x.png in Resources */,
+				ADE4999A173B0D7B00C92FB6 /* Default.png in Resources */,
+				ADE4999B173B0D7B00C92FB6 /* Default@2x.png in Resources */,
+				ADE4999C173B0D7B00C92FB6 /* first.png in Resources */,
+				ADE4999D173B0D7B00C92FB6 /* first@2x.png in Resources */,
+				ADE4999E173B0D7B00C92FB6 /* second.png in Resources */,
+				ADE4999F173B0D7B00C92FB6 /* second@2x.png in Resources */,
+				ADE499A0173B0D7B00C92FB6 /* tap.aif in Resources */,
+				ADE499A6173B0DAE00C92FB6 /* InfoPlist.strings in Resources */,
+				ADE499A7173B0DAE00C92FB6 /* MainStoryboard.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -238,29 +273,32 @@
 			files = (
 				AD0B4E8D17345C6400ECA3C6 /* main.m in Sources */,
 				AD0B4E9117345C6400ECA3C6 /* ATAppDelegate.m in Sources */,
-				AD0B4E9D17345C6400ECA3C6 /* ATFirstViewController.m in Sources */,
-				AD0B4EA417345C6400ECA3C6 /* ATSecondViewController.m in Sources */,
-				AD0B4EB017345C8300ECA3C6 /* ATMapKitViewController.m in Sources */,
+				AD0B4EA417345C6400ECA3C6 /* ATHistoryViewController.m in Sources */,
+				AD0B4EB017345C8300ECA3C6 /* ATMapViewController.m in Sources */,
+				AD84AEC01739830C00935DB2 /* ATSettingsViewController.m in Sources */,
+				ADA9C73B173B04DA00A37ED3 /* ATRealTimeViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXVariantGroup section */
-		AD0B4E8917345C6400ECA3C6 /* InfoPlist.strings */ = {
+		ADE499A2173B0DAE00C92FB6 /* InfoPlist.strings */ = {
 			isa = PBXVariantGroup;
 			children = (
-				AD0B4E8A17345C6400ECA3C6 /* en */,
+				ADE499A3173B0DAE00C92FB6 /* en */,
 			);
 			name = InfoPlist.strings;
+			path = en.lproj;
 			sourceTree = "<group>";
 		};
-		AD0B4E9817345C6400ECA3C6 /* MainStoryboard.storyboard */ = {
+		ADE499A4173B0DAE00C92FB6 /* MainStoryboard.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
-				AD0B4E9917345C6400ECA3C6 /* en */,
+				ADE499A5173B0DAE00C92FB6 /* en */,
 			);
 			name = MainStoryboard.storyboard;
+			path = en.lproj;
 			sourceTree = "<group>";
 		};
 /* End PBXVariantGroup section */
@@ -373,6 +411,7 @@
 				AD0B4EAD17345C6400ECA3C6 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

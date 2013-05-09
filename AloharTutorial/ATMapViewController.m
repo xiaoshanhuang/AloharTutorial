@@ -48,7 +48,7 @@
 - (void)viewWillAppear:(BOOL)animated
 {
     self.callBackTimer =
-    [NSTimer scheduledTimerWithTimeInterval:60
+    [NSTimer scheduledTimerWithTimeInterval:10
                                      target:self
                                    selector:@selector(updateStatesAndLocation)
                                    userInfo:nil

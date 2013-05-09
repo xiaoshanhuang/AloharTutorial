@@ -8,6 +8,7 @@
 
 #import <UIKit/UIKit.h>
 #import <Alohar/Alohar.h>
+#import <AVFoundation/AVFoundation.h>
 
 @interface ATRealTimeViewController : UIViewController <ALMobileStateDelegegate, ALMotionDelegate, ALUserStayDelegate>
 
