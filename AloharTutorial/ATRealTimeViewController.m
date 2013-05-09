@@ -7,14 +7,21 @@
 //
 
 #import "ATRealTimeViewController.h"
+#import <Alohar/Alohar.h>
+#import <AVFoundation/AVFoundation.h>
+#import "CMMotionManager+Shared.h"
 
-@interface ATRealTimeViewController ()
+@interface ATRealTimeViewController () <ALMobileStateDelegegate, ALMotionDelegate, ALUserStayDelegate>
+
 @property (strong, nonatomic) NSTimer * callBackTimer;
 @property (weak, nonatomic) IBOutlet UILabel *motionStateLabel;
 @property (weak, nonatomic) IBOutlet UILabel *mobileStateLabel;
-@property(nonatomic,retain)NSString *wordToSpeech;
-@property(nonatomic,retain)AVAudioPlayer *player;
-@property(nonatomic,assign)int totalCountPlayed;
+@property (weak, nonatomic) IBOutlet UILabel *accelerometerXLabel;
+@property (weak, nonatomic) IBOutlet UILabel *accelerometerYLabel;
+@property (weak, nonatomic) IBOutlet UILabel *accelerometerZLabel;
+@property(strong, nonatomic) NSString *wordToSpeech;
+@property(strong, nonatomic) AVAudioPlayer *player;
+@property(nonatomic,assign) int totalCountPlayed;
 
 @end
 
@@ -34,23 +41,75 @@
     [super viewDidLoad];
     [Alohar setMotionDelegate:self];
     [Alohar setMobileStateDelegate:self];
-    [self updateStates];
 }
 
-- (void)viewWillAppear:(BOOL)animated
+- (void)viewDidAppear:(BOOL)animated
+{
+    [super viewDidAppear:animated];
+    [self startTimer];
+    [self updateStates];
+    [self startMotionUpdate];
+}
+
+- (void)viewDidDisappear:(BOOL)animated
+{
+    [super viewDidDisappear:animated];
+    [self stopTimer];
+    [self stopMotionUpdate];
+}
+
+#pragma mark - NSTimer
+
+- (void)startTimer
 {
     self.callBackTimer =
-    [NSTimer scheduledTimerWithTimeInterval:5.0
+    [NSTimer scheduledTimerWithTimeInterval:3.0
                                      target:self
                                    selector:@selector(updateStates)
                                    userInfo:nil
                                     repeats:YES];
 }
 
+- (void)stopTimer
+{
+    [self.callBackTimer invalidate];
+    self.callBackTimer = nil;
+}
+
 - (void)updateStates
 {
 //    [self speechUsingGoogleTTS:@"test"];
+//    ALMotionState * motionState = [Alohar currentMotionState];
+//    self.motionStateLabel.text = [motionState stateDescription];
+//    ALMobileState * mobileState = [Alohar currentMobileState];
+//    self.mobileStateLabel.text = [mobileState stateDescription];
 }
+
+#pragma mark - Core Motion
+#define ACC_FS 10.0
+
+- (void)startMotionUpdate
+{
+    CMMotionManager *motionManager = [CMMotionManager sharedMotionManager];
+    if ([motionManager isAccelerometerAvailable]) {
+        [motionManager setAccelerometerUpdateInterval:1/ACC_FS];
+        [motionManager startAccelerometerUpdatesToQueue:[NSOperationQueue mainQueue] withHandler:^(CMAccelerometerData *data, NSError *error) {
+            self.accelerometerXLabel.text =
+            [NSString stringWithFormat:@"%f", data.acceleration.x];
+            self.accelerometerYLabel.text =
+            [NSString stringWithFormat:@"%f", data.acceleration.y];
+            self.accelerometerZLabel.text =
+            [NSString stringWithFormat:@"%f", data.acceleration.z];
+        }];
+    }
+}
+
+- (void)stopMotionUpdate
+{
+    [[CMMotionManager sharedMotionManager] stopAccelerometerUpdates];
+}
+
+#pragma mark - Alohar state update
 
 - (void)didUpdateToMotionState:(ALMotionState *)newMotionState fromMotionState:(ALMotionState *)oldMotionState
 {
@@ -65,6 +124,8 @@
     self.mobileStateLabel.text = [mobileState stateDescription];
     [self speechUsingGoogleTTS:[mobileState stateDescription]];
 }
+
+#pragma mark - Gogole TTS
 
 - (void)speechUsingGoogleTTS:(NSString *)sentenceToSpeeh
 {
@@ -83,19 +144,13 @@
     [data writeToFile:path atomically:YES];
     NSError *err;
     if ([[NSFileManager defaultManager] fileExistsAtPath:path]){
-        
-        self.player = [[AVAudioPlayer alloc] initWithContentsOfURL:
-                       [NSURL fileURLWithPath:path] error:&err];
+        self.player = [[AVAudioPlayer alloc] initWithContentsOfURL:[NSURL fileURLWithPath:path] error:&err];
         [self.player prepareToPlay];
         [self.player setNumberOfLoops:0];
         [self.player play];
     }
 }
 
-- (void)didReceiveMemoryWarning
-{
-    [super didReceiveMemoryWarning];
-    // Dispose of any resources that can be recreated.
-}
-
 @end
+
+

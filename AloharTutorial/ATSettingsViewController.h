@@ -15,6 +15,5 @@
 @property (strong, nonatomic) IBOutlet UILabel *tokenLabel;
 @property (strong, nonatomic) IBOutlet UISwitch *moniteringUserSwitch;
 
-- (IBAction)toggleMoniteringUser:(UISwitch *)sender;
 
 @end

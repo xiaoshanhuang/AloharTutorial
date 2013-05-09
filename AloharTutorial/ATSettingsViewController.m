@@ -11,7 +11,7 @@
 
 
 @interface ATSettingsViewController ()
-
+- (IBAction)toggleMoniteringUser:(UISwitch *)sender;
 @end
 
 @implementation ATSettingsViewController

@@ -8,7 +8,7 @@
 
 #import "ATMapViewController.h"
 
-@interface ATMapViewController ()
+@interface ATMapViewController () <MKMapViewDelegate, ALMobileStateDelegegate, ALMotionDelegate, ALUserStayDelegate>
 
 @property (strong, nonatomic) NSTimer * callBackTimer;
 @property (strong, nonatomic) CLLocation * currentLocation;

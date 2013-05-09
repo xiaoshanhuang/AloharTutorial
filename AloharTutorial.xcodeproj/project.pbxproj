@@ -24,6 +24,7 @@
 		AD0B4EC017345DCE00ECA3C6 /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AD0B4EB917345DCE00ECA3C6 /* SystemConfiguration.framework */; };
 		AD0B4EC217345DFD00ECA3C6 /* MobileCoreServices.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AD0B4EC117345DFD00ECA3C6 /* MobileCoreServices.framework */; };
 		AD0B6495173B4E6300DF5F4B /* AVFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AD0B6494173B4E6300DF5F4B /* AVFoundation.framework */; };
+		AD49EB13173C2915004BE236 /* CMMotionManager+Shared.m in Sources */ = {isa = PBXBuildFile; fileRef = AD49EB12173C2914004BE236 /* CMMotionManager+Shared.m */; };
 		AD84AEC01739830C00935DB2 /* ATSettingsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = AD84AEBF1739830C00935DB2 /* ATSettingsViewController.m */; };
 		ADA9C73B173B04DA00A37ED3 /* ATRealTimeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = ADA9C73A173B04DA00A37ED3 /* ATRealTimeViewController.m */; };
 		ADA9C73D173B075C00A37ED3 /* AudioToolbox.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = ADA9C73C173B075C00A37ED3 /* AudioToolbox.framework */; };
@@ -63,6 +64,8 @@
 		AD0B4EB917345DCE00ECA3C6 /* SystemConfiguration.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SystemConfiguration.framework; path = System/Library/Frameworks/SystemConfiguration.framework; sourceTree = SDKROOT; };
 		AD0B4EC117345DFD00ECA3C6 /* MobileCoreServices.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MobileCoreServices.framework; path = System/Library/Frameworks/MobileCoreServices.framework; sourceTree = SDKROOT; };
 		AD0B6494173B4E6300DF5F4B /* AVFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AVFoundation.framework; path = System/Library/Frameworks/AVFoundation.framework; sourceTree = SDKROOT; };
+		AD49EB11173C2914004BE236 /* CMMotionManager+Shared.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "CMMotionManager+Shared.h"; sourceTree = "<group>"; };
+		AD49EB12173C2914004BE236 /* CMMotionManager+Shared.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "CMMotionManager+Shared.m"; sourceTree = "<group>"; };
 		AD84AEBE1739830C00935DB2 /* ATSettingsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ATSettingsViewController.h; sourceTree = "<group>"; };
 		AD84AEBF1739830C00935DB2 /* ATSettingsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ATSettingsViewController.m; sourceTree = "<group>"; };
 		ADA9C739173B04DA00A37ED3 /* ATRealTimeViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ATRealTimeViewController.h; sourceTree = "<group>"; };
@@ -150,6 +153,8 @@
 				ADE49997173B0D7B00C92FB6 /* Sounds */,
 				AD0B4E8F17345C6400ECA3C6 /* ATAppDelegate.h */,
 				AD0B4E9017345C6400ECA3C6 /* ATAppDelegate.m */,
+				AD49EB11173C2914004BE236 /* CMMotionManager+Shared.h */,
+				AD49EB12173C2914004BE236 /* CMMotionManager+Shared.m */,
 				ADA9C739173B04DA00A37ED3 /* ATRealTimeViewController.h */,
 				ADA9C73A173B04DA00A37ED3 /* ATRealTimeViewController.m */,
 				AD84AEBE1739830C00935DB2 /* ATSettingsViewController.h */,
@@ -277,6 +282,7 @@
 				AD0B4EB017345C8300ECA3C6 /* ATMapViewController.m in Sources */,
 				AD84AEC01739830C00935DB2 /* ATSettingsViewController.m in Sources */,
 				ADA9C73B173B04DA00A37ED3 /* ATRealTimeViewController.m in Sources */,
+				AD49EB13173C2915004BE236 /* CMMotionManager+Shared.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -363,6 +369,7 @@
 		AD0B4EAC17345C6400ECA3C6 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CLANG_ENABLE_OBJC_ARC = YES;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"\"$(SRCROOT)\"",
@@ -379,6 +386,7 @@
 		AD0B4EAD17345C6400ECA3C6 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CLANG_ENABLE_OBJC_ARC = YES;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"\"$(SRCROOT)\"",
