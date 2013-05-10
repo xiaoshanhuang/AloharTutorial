@@ -9,22 +9,40 @@
 #import "ATAppDelegate.h"
 
 @implementation ATAppDelegate
+@synthesize events;
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
 {
-    [Alohar registerWithAppID:@"333"
-                    andAPIKey:@"393f764979844e9c863185f38adf9d45d268dead"
-                 withDelegate:self];
+    NSString *appID = @"333";
+    NSString *apiKey = @"393f764979844e9c863185f38adf9d45d268dead";
+    self.userID = @"hxs";
+    [ALLog setDelegate:self];
+    [Alohar customizeApp:appID withApiKey:apiKey];
+    if ([Alohar isLoggedIn]) {
+        [Alohar startMonitoringUser];
+        [self loadHistoryEvents];
+        [Alohar setUserStayDelegate:self];
+    } else {
+        NSString *userToken = [[NSUserDefaults standardUserDefaults] stringForKey:self.userID];
+        if (userToken == nil || userToken.length == 0){
+            [Alohar registerWithAppID:appID andAPIKey:apiKey withDelegate:self];
+        }else{
+            [Alohar authenticateWithAppID:appID andAPIKey:apiKey andUserID:userToken withDelegate:self];
+        }
+    }
     [[AVAudioSession sharedInstance] setDelegate: self];
     [[AVAudioSession sharedInstance] setCategory:AVAudioSessionCategoryPlayback error:nil];
 
     return YES;
 }
 
-- (void)aloharDidLogin:(NSString *)userID
+- (void)aloharDidLogin:(NSString *)userToken
 {
-    NSLog(@"User logged in. ");
+    [[NSUserDefaults standardUserDefaults] setObject:userToken
+                                              forKey:self.userID];
     [Alohar startMonitoringUser];
+    [self loadHistoryEvents];
+    [Alohar setUserStayDelegate:self];
 }
 
 - (void)aloharDidFailWithError:(NSError *)error
@@ -62,5 +80,73 @@
 {
     // Called when the application is about to terminate. Save data if appropriate. See also applicationDidEnterBackground:.
 }
+
+#pragma mark -
+#pragma mark ALLogDelegate
+- (void)onLog:(NSString *)log
+{
+    NSLog(@"++++ %@", log);
+}
+
+- (void)loadHistoryEvents
+{
+    if (self.events == nil) {
+        NSArray *history = [Alohar userStayLocationHistory];
+        self.events = [NSMutableArray arrayWithArray:history];
+    }
+}
+
+#pragma mark -
+#pragma mark ALUserStayDelegate
+- (void)currentUserStayIdentified:(ALUserStay *)newStay
+{
+    NSLog(@"%s, userStay: %@", __FUNCTION__, [newStay description]);
+    NSArray *keys = [NSArray arrayWithObjects:@"type", @"stay", @"timestamp", nil];
+    NSString *time = [self formatTimeStamp:[NSDate date]];
+    NSArray *objects = [NSArray arrayWithObjects:@"Userstay", newStay, time, nil];
+    NSDictionary *event = [[NSDictionary alloc] initWithObjects:objects forKeys:keys];
+    [self.events addObject:event];
+}
+
+
+- (void)userArrivedAtPlace:(ALPlace *)personalPlace withLocation:(CLLocation *)location;
+{
+    NSLog(@"%s, %@", __FUNCTION__, @"arrival");
+    if (personalPlace != nil) {
+        NSArray *keys = [NSArray arrayWithObjects:@"type", @"location", @"timestamp", @"place", nil];
+        NSString *time = [self formatTimeStamp:[NSDate date]];
+        NSArray *objects = [NSArray arrayWithObjects:@"Arrival", [Alohar currentLocation], time, personalPlace,  nil];
+        NSDictionary *event = [[NSDictionary alloc] initWithObjects:objects forKeys:keys];
+        [self.events addObject:event];
+    } else {
+        NSArray *keys = [NSArray arrayWithObjects:@"type", @"location", @"timestamp", nil];
+        NSString *time = [self formatTimeStamp:[NSDate date]];
+        NSArray *objects = [NSArray arrayWithObjects:@"Arrival", [Alohar currentLocation], time, nil];
+        NSDictionary *event = [[NSDictionary alloc] initWithObjects:objects forKeys:keys];
+        [self.events addObject:event];
+    }
+    
+}
+
+- (void)userDepartedPlaceWithLocation:(CLLocation *)location
+{
+    NSLog(@"%s, %@", __FUNCTION__, @"departure");
+    NSArray *keys = [NSArray arrayWithObjects:@"type", @"location", @"timestamp", nil];
+    NSString *time = [self formatTimeStamp:[NSDate date]];
+    NSArray *objects = [NSArray arrayWithObjects:@"Departure", location, time ,nil];
+    NSDictionary *event = [[NSDictionary alloc] initWithObjects:objects forKeys:keys];
+    [self.events addObject:event];
+}
+
+- (NSString *)formatTimeStamp:(NSDate *)date
+{
+    static NSDateFormatter *formatter;
+    if (!formatter) {
+        formatter = [[NSDateFormatter alloc] init];
+        [formatter setDateFormat:@"MM dd hh:mma"];
+        
+    }
+}
+
 
 @end

@@ -13,5 +13,7 @@
 
 @interface ATAppDelegate : UIResponder <UIApplicationDelegate, ALSessionDelegate, ALLogDelegate, ALUserStayDelegate>
 @property (strong, nonatomic) UIWindow *window;
+@property (strong, nonatomic) NSMutableArray *events;
+@property (strong, nonatomic) NSString *userID;
 
 @end
